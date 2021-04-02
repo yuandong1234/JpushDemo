@@ -90,7 +90,7 @@ public class PushMessageReceiver extends JPushMessageReceiver {
     @Override
     public void onNotifyMessageArrived(Context context, NotificationMessage notificationMessage) {
         super.onNotifyMessageArrived(context, notificationMessage);
-        Log.e(TAG, "onNotifyMessageArrived");
+        Log.e(TAG, "onNotifyMessageArrived : "+notificationMessage.toString());
     }
 
     /**
@@ -102,7 +102,7 @@ public class PushMessageReceiver extends JPushMessageReceiver {
     @Override
     public void onNotifyMessageOpened(Context context, NotificationMessage notificationMessage) {
         super.onNotifyMessageOpened(context, notificationMessage);
-        Log.e(TAG, "onNotifyMessageOpened");
+        Log.e(TAG, "onNotifyMessageOpened : "+notificationMessage.toString());
     }
 
     @Override

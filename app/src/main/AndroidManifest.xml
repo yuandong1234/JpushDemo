@@ -22,13 +22,27 @@
             </intent-filter>
         </activity>
 
-        <!--JPUSH-->
+        <activity
+            android:name=".JpushTargetActivity"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW" />
+                <category android:name="android.intent.category.DEFAULT" />
+                <data
+                    android:host="yql"
+                    android:path="/JpushTargetActivity/"
+                    android:scheme="app" />
+            </intent-filter>
+        </activity>
+
+        <!-- JPUSH -->
         <receiver
             android:name=".push.PushMessageReceiver"
             android:enabled="true"
             android:exported="false">
             <intent-filter>
                 <action android:name="cn.jpush.android.intent.RECEIVE_MESSAGE" />
+
                 <category android:name="com.kaisa.yql" />
             </intent-filter>
         </receiver>
